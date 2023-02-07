@@ -7,13 +7,20 @@ import { PaisService } from '../../services/pais.service';
   styles: [],
 })
 export class PorPaisComponent {
-  termino: string = 'termino';
+  termino: string = 'Colombia';
+  hayError404: boolean = false;
 
   constructor(private paisService: PaisService) {}
 
   buscar() {
-    this.paisService.buscarPais(this.termino).subscribe((resp) => {
-      console.log(resp);
-    });
+    this.hayError404 = false;
+    this.paisService.buscarPais(this.termino).subscribe(
+      (resp) => {
+        console.log(resp);
+      },
+      (err) => {
+        this.hayError404 = true;
+      }
+    );
   }
 }
