@@ -21,7 +21,6 @@ export class PorPaisComponent {
       (resp) => {
         console.log(resp);
         this.paises = resp;
-        // resp[0].name.
       },
       (err) => {
         this.hayError404 = true;
