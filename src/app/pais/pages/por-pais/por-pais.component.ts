@@ -29,4 +29,6 @@ export class PorPaisComponent {
       }
     );
   }
+
+  mostrarSugerencias(termino: string) {}
 }
