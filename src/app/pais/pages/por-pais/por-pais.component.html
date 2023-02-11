@@ -1,6 +1,4 @@
-<div
-  class="table table-hover animate__animated animate__fadeIn animate__faster"
->
+<div class="animate__animated animate__fadeIn animate__faster">
   <h2>Por país</h2>
   <hr />
 
@@ -12,6 +10,18 @@
         (onDebounce)="mostrarSugerencias($event)"
       ></app-pais-input>
     </div>
+  </div>
+
+  <div *ngIf="sugerencias.length" class="list-group">
+    <a
+      *ngFor="let sugerencia of sugerencias"
+      [routerLink]="['/pais/', sugerencia.cca2]"
+      class="list-group-item list-group-item-action"
+      >{{ sugerencia.name.common }}</a
+    >
+    <a (click)="buscar(termino)" class="list-group-item list-group-item-action"
+      >Buscar "{{ termino }}"</a
+    >
   </div>
 </div>
 
