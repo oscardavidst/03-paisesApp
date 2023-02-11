@@ -19,7 +19,6 @@ export class PorPaisComponent {
     this.termino = termino;
     this.paisService.buscarPais(this.termino).subscribe(
       (resp) => {
-        console.log(resp);
         this.paises = resp;
       },
       (err) => {

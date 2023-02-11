@@ -16,3 +16,15 @@
     </button>
   </div>
 </div>
+
+<hr />
+
+<div *ngIf="hayError404" class="alert alert-warning">
+  No se encontro nada con el término de busqueda
+</div>
+
+<div *ngIf="paises.length" class="row">
+  <div class="col">
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
+  </div>
+</div>
