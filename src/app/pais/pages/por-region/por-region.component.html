@@ -1,19 +1,23 @@
-<h2>Por región</h2>
-<hr />
-<h5>Seleccione la región</h5>
-<div class="row">
-  <div class="col">
-    <!-- [ngClass]="{
+<div
+  class="table table-hover animate__animated animate__fadeIn animate__faster"
+>
+  <h2>Por región</h2>
+  <hr />
+  <h5>Seleccione la región</h5>
+  <div class="row">
+    <div class="col">
+      <!-- [ngClass]="{
         'btn-info': regionActiva === region,
         'btn-outline-info': regionActiva != region
       }" -->
-    <button
-      (click)="activarRegion(region)"
-      [class]="getClassButton(region)"
-      *ngFor="let region of regiones"
-    >
-      {{ region | titlecase }}
-    </button>
+      <button
+        (click)="activarRegion(region)"
+        [class]="getClassButton(region)"
+        *ngFor="let region of regiones"
+      >
+        {{ region | titlecase }}
+      </button>
+    </div>
   </div>
 </div>
 

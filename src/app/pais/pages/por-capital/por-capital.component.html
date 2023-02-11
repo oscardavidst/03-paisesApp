@@ -1,13 +1,17 @@
-<h2>Por capital</h2>
-<hr />
+<div
+  class="table table-hover animate__animated animate__fadeIn animate__faster"
+>
+  <h2>Por capital</h2>
+  <hr />
 
-<div class="row">
-  <div class="col">
-    <app-pais-input
-      placeholder="Buscar capital..."
-      (onEnter)="buscar($event)"
-      (onDebounce)="mostrarSugerencias($event)"
-    ></app-pais-input>
+  <div class="row">
+    <div class="col">
+      <app-pais-input
+        placeholder="Buscar capital..."
+        (onEnter)="buscar($event)"
+        (onDebounce)="mostrarSugerencias($event)"
+      ></app-pais-input>
+    </div>
   </div>
 </div>
 
